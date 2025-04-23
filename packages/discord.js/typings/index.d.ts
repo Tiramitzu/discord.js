@@ -777,7 +777,7 @@ export interface EmbedAssetData extends Omit<APIEmbedImage, 'proxy_url'> {
 
 export class Embed {
   private constructor(data: APIEmbed);
-  public readonly data: Readonly<APIEmbed>;
+  public get data(): APIEmbed;
   public get fields(): APIEmbedField[];
   public get footer(): EmbedFooterData | null;
   public get title(): string | null;
